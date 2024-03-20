@@ -1,0 +1,28 @@
+{
+  "name": "marp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "printer cli",
+  "scripts": {
+    "watch": "yarn marp -w | nodemon --watch ./src/template/template.pug ./src/interpolation.js",
+    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/themes/theme.css --watch",
+    "interpolate": "node ./src/interpolation.js"
+  },
+  "main": "public/slide.html",
+  "license": "MIT",
+  "marp": {
+    "inputDir": "./src/slides",
+    "html": true,
+    "output": "./public",
+    "themeSet": "./src/themes"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "^3.4.0",
+    "moment": "^2.30.1",
+    "nodemon": "^3.1.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
