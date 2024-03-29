@@ -4,15 +4,15 @@
   "type": "module",
   "description": "printer cli",
   "scripts": {
-    "watch": "yarn marp -w | nodemon --watch ./src/template/template.pug ./src/interpolation.js",
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/themes/theme.css --watch"
+    "watch": "npx tailwindcss -i ./src/input.css -o ./src/themes/theme.css --watch | nodemon --watch ./src/template/scheda.js ./src/interpolation.js",
+    "watch-interpolate": "nodemon --watch ./src/template/scheda.js ./src/interpolation.js",
+    "watch-tailwind": "npx tailwindcss -i ./src/input.css -o ./src/themes/theme.css --watch"
   },
   "main": "public/slide.html",
   "license": "MIT",
   "marp": {
     "inputDir": "./src/slides",
     "html": true,
-    "pdf": false,
     "output": "./public",
     "themeSet": "./src/themes"
   },
